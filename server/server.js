@@ -17,9 +17,9 @@ app.post('/api/testUser', function(err, response) {
 app.get('/api/testMovie', function(err, response) {
   if (err) {
     console.log('/api/testMovie error', err);
-    apiHelpers.getMovie();
-    response.send('perhaps we got the movie');
   }
+  apiHelpers.getMovie();
+  response.send('perhaps we got the movie');
 })
 
 app.listen('3000', () => {
