@@ -1,5 +1,5 @@
 /node_modules
 
-/server/config.js
+/server/auth0-variables.js
 
 .DS_Store
