@@ -1,20 +1,15 @@
 const User = require('./database.js');
 
-
 module.exports = {
-  createUser: function () {
+  createUser: () => {
   let user = new User({
-      username: 'rickjames',
+      username: 'rickjames3',
       email: 'test@test.com',
       hash: 'JALIJDF8229ASLKDNFOPAIUSDF'
     });
 
-    user.save(function(err) {
-      if (err) {
-        console.log('error in dbhelpers', err);
-      } else {
-        console.log('saved new user');
-      }
+    user.save(err => {
+      console.log(err ? 'error in dbhelpers ' + err : 'saved new user');
     })
   },
 
