@@ -1,12 +1,12 @@
 {
-  "name": "mediachief",
+  "name": "mediamaistro",
   "version": "1.0.0",
-  "description": "A media center for content such as movies and tv shows.",
+  "description": "A media center to keep track of the movies you want to watch.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server/server.js",
-    "start": "node server/server.js"
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
+    "test:watch": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -18,14 +18,26 @@
     "url": "https://github.com/bruce-graham/mediachief/issues"
   },
   "homepage": "https://github.com/bruce-graham/mediachief#readme",
+  "devDependencies": {
+    "babel-core": "^6.2.1",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "jsdom": "^8.1.0",
+    "react-addons-test-utils": "^0.14.7",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  },
   "dependencies": {
-    "@uirouter/angularjs": "^1.0.6",
-    "angular": "^1.6.6",
-    "angular-auth0": "^2.0.0",
-    "angular-ui-router": "^1.0.3",
     "auth0-js": "^8.9.3",
+    "babel-preset-stage-1": "^6.1.18",
     "axios": "^0.16.2",
     "express": "^4.15.4",
-    "mongoose": "^4.11.11"
+    "mongoose": "^4.11.11",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-redux": "4.3.0",
+    "react-router": "^2.0.1",
+    "redux": "^3.0.4"
   }
 }
