@@ -1,13 +1,13 @@
 const axios = require('axios');
 
 module.exports = {
-  getMovie: function () {
+  getMovie: () => {
     axios.get('http://theapache64.xyz:8080/movie_db/search?keyword=Titanic')
-      .then(function(response) {
+      .then(response => {
         console.log('found titanic');
         console.log(response);
       })
-      .catch(function(error) {
+      .catch(error => {
         console.log('apihelpers error', error);
       })
   }
